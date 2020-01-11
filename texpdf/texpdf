@@ -5,16 +5,11 @@
 # init stat shell vars
 eval $(stat -s $1.bib)
 mTime=$st_mtime
-echo $mTime
 # compile bibliography
 function bib(){
-		echo "KSAJFKLASDASDJKL: \n aaslkdjlsaj djasldj \n"
-		echo "RUNNING BIBER"
-		echo "KSAJFKLASDASDJKL: \n aaslkdjlsaj djasldj \n"
 		biber "$1"
 		pdflatex "$1.tex"
 		pdflatex "$1.tex"
-		echo "FINISHED: \n aaslkdjlsaj djasldj \n"
 	}
 
 if [[ ! (-e ".tmp.sh") ]] ; then
